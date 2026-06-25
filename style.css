@@ -55,3 +55,24 @@ nav a:hover {
 
     color: black;
 }
+
+/* Classes pour le tableau des matériels */
+.col-no-serie {
+    width: 150px;
+}
+
+.col-id {
+    width: 50px;
+}
+
+.col-produit {
+    width: 200px;
+}
+
+.col-date-achat {
+    width: 200px;
+}
+
+.col-prix {
+    width: 200px;
+}

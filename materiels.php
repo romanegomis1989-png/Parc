@@ -6,11 +6,11 @@
 <table>
     <thead>
         <tr>
-            <th>Numéro de série</th>
-            <th>ID</th>
-            <th>Produit</th>
-            <th>Date d'achat</th>
-            <th>Prix</th>
+            <th class="col-no-série">Numéro de série</th>
+            <th class="col-id">ID</th>
+            <th class="col-produit">Produit</th>
+            <th class="col-date-achat">Date d'achat</th>
+            <th class="col-prix">Prix</th>
         </tr>
   </thead>
   <tbody>
