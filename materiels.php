@@ -4,7 +4,8 @@
 <?php
 
 $pdo = new PDO('mysql:host=localhost;dbname=parc_informatique;charset=utf8mb4', 'root', 'FwJiMeCdqNc0nbFT');
-$materiels = $pdo->query('SELECT * FROM materiels')->fetchAll(PDO::FETCH_ASSOC);
+$requete = $pdo->query('SELECT * FROM materiels');
+$materiels= $requete->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -24,28 +25,19 @@ $materiels = $pdo->query('SELECT * FROM materiels')->fetchAll(PDO::FETCH_ASSOC);
         </tr>
   </thead>
   <tbody>
-        <tr>
-            <td>SN-001-ABC</td>
-            <td>1</td>
-            <td>ThinkPad X1 Carbon</td>
-            <td>2023-03-15</td>
-            <td>1299.99</td>
-        </tr>
-        <tr>
-            <td>SN-002-DEF</td>
-            <td>2</td>
-            <td>MacBook Pro 14</td>
-            <td>2023-07-22</td>
-            <td>2199.00</td>
-        </tr>
-        <tr>
-            <td>SN-003-GHI</td>
-            <td>1</td>
-            <td>ThinkPad E15</td>
-            <td>2024-01-10</td>
-            <td>899.50</td>
-        </tr>
+<?php
+    foreach ($materiels as $materiel) {
+        echo '<tr>';
+        echo '<td>' . $materiel['no_serie'] . '</td>';
+        echo '<td>' . $materiel['id_marque'] . '</td>';
+        echo '<td>' . $materiel['modele'] . '</td>';
+        echo '<td>' . $materiel['date_achat'] . '</td>';
+        echo '<td>' . $materiel['prix_achat'] . '</td>';
+        echo '</tr>';
+}
+?>
   </tbody>
 </table>
 
 <?php include 'footer.php' ?>
+
