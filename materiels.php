@@ -1,5 +1,15 @@
 <?php $titre = "Parc informatique - Liste des matériels"; ?>
 <?php include 'entete.php' ?>
+
+<?php
+
+$pdo = new PDO('mysql:host=localhost;dbname=parc_informatique;charset=utf8mb4', 'root', 'FwJiMeCdqNc0nbFT');
+$materiels = $pdo->query('SELECT * FROM materiels')->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
+
+
 <h1>Parc informatique</h1>
 <h2>Liste des matériels</h2>
 
