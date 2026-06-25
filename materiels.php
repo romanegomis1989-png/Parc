@@ -22,20 +22,23 @@ $materiels= $requete->fetchAll(PDO::FETCH_ASSOC);
             <th class="col-produit">Produit</th>
             <th class="col-date-achat">Date d'achat</th>
             <th class="col-prix">Prix</th>
+            <th class="col-commande"></th>
+
         </tr>
   </thead>
   <tbody>
-<?php
-    foreach ($materiels as $materiel) {
-        echo '<tr>';
-        echo '<td>' . $materiel['no_serie'] . '</td>';
-        echo '<td>' . $materiel['id_marque'] . '</td>';
-        echo '<td>' . $materiel['modele'] . '</td>';
-        echo '<td>' . $materiel['date_achat'] . '</td>';
-        echo '<td>' . $materiel['prix_achat'] . '</td>';
-        echo '</tr>';
-}
-?>
+    <?php
+        foreach ($materiels as $materiel) {
+            echo '<tr>';
+            echo '<td>' . $materiel['no_serie'] . '</td>';
+            echo '<td>' . $materiel['id_marque'] . '</td>';
+            echo '<td>' . $materiel['modele'] . '</td>';
+            echo '<td>' . $materiel['date_achat'] . '</td>';
+            echo '<td>' . $materiel['prix_achat'] . '</td>';
+            echo '<td><a href="">Modifier</a>&nbsp;<a href="">Supprimer</a></td>';
+            echo '</tr>';
+    }
+    ?>
   </tbody>
 </table>
 
