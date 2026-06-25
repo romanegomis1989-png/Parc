@@ -61,4 +61,16 @@ INSERT INTO marques (nom) VALUES
     ('Lenovo');
 
 INSERT INTO utilisateurs (nom, prenom, email, mot_de_passe, id_service) VALUES
-('Gomis',  'Romane', 'romane.gomis@parc.fr', 'hash_factice_1', 1)
+('Gomis',  'Romane', 'romane.gomis@parc.fr', 'hash_factice_1', 1),
+('Kurz',  'Philippe', 'philippe.kurz@parc.fr', 'hash_factice_2', 1),
+('Dupont',  'Pierre', 'pierre.dupont@parc.fr', 'hash_factice_3', 1);
+
+INSERT INTO materiels (no_serie, id_marque, modele, date_achat, prix_achat) VALUES
+('SN-001-ABC', 1, 'ThinkPad X1 Carbon', '2023-03-15', 1299.99),
+('SN-002-DEF', 2, 'MacBook Pro 14"',   '2023-07-22', 2199.00),
+('SN-003-GHI', 1, 'ThinkPad E15',      '2024-01-10',  899.50);
+
+INSERT INTO utilise (id_utilisateur, id_materiel, date_debut, date_fin_prevue, date_fin) VALUES
+(1, 1, '2023-03-20 08:00:00', '2024-03-20', '2024-02-15'),
+(2, 2, '2023-08-01 09:00:00', '2024-08-01',  NULL),
+(3, 3, '2024-01-15 08:30:00', '2025-01-15',  NULL);
