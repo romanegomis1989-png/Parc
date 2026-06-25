@@ -6,7 +6,7 @@
 <table>
     <thead>
         <tr>
-            <th class="col-no-série">Numéro de série</th>
+            <th class="col-no-serie">Numéro de série</th>
             <th class="col-id">ID</th>
             <th class="col-produit">Produit</th>
             <th class="col-date-achat">Date d'achat</th>

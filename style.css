@@ -56,9 +56,22 @@ nav a:hover {
     color: black;
 }
 
+table {
+    border-collapse: collapse;
+}
+
+table td, table th {
+    border: solid 1px rgba(96, 95, 95, 0.741);
+}
+
+table th {
+    background-color: rgb(130, 0, 0);
+    color: aliceblue;
+}
+
 /* Classes pour le tableau des matériels */
 .col-no-serie {
-    width: 150px;
+    width: 200px;
 }
 
 .col-id {
@@ -70,9 +83,9 @@ nav a:hover {
 }
 
 .col-date-achat {
-    width: 200px;
+    width: 100px;
 }
 
 .col-prix {
-    width: 200px;
+    width: 100px;
 }
