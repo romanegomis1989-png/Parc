@@ -1,9 +1,10 @@
 <?php $titre = "Parc informatique - Entrées/Sorties"; ?>
+<?php include 'config.php' ?>
 <?php include 'entete.php' ?>
 
 <?php
 
-$pdo = new PDO('mysql:host=localhost;dbname=parc_informatique;charset=utf8mb4', 'root', 'FwJiMeCdqNc0nbFT');
+$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
 $requete = $pdo->query('SELECT utilise.*, utilisateurs.nom AS nom_utilisateur, utilisateurs.prenom AS prenom_utilisateur, materiels.no_serie, materiels.modele
                          FROM utilise
                          LEFT JOIN utilisateurs ON utilise.id_utilisateur = utilisateurs.id
