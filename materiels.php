@@ -36,7 +36,7 @@ $materiels= $requete->fetchAll(PDO::FETCH_ASSOC);
             echo '<td>' . $materiel['modele'] . '</td>';
             echo '<td>' . $materiel['date_achat'] . '</td>';
             echo '<td>' . $materiel['prix_achat'] . '</td>';
-            echo '<td><a href="">Modifier</a>&nbsp;<a href="">Supprimer</a></td>';
+            echo '<td><a href=""><img src="images/pencil.svg"/></a>&nbsp;<a href=""><img src="images/trash.svg"/></a></td>';
             echo '</tr>';
     }
     ?>
