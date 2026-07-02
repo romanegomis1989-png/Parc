@@ -15,6 +15,8 @@ $materiels= $requete->fetchAll(PDO::FETCH_ASSOC);
 <h1>Parc informatique</h1>
 <h2>Liste des matériels</h2>
 
+<a href="edit-materiel.php"><img src="images/pencil-plus.svg" style="height: 20px;"/> Ajouter un matériel</a>
+
 <table>
     <thead>
         <tr>

@@ -17,6 +17,7 @@ $utilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
 <h1>Parc informatique</h1>
 <h2>Liste des utilisateurs</h2>
 
+<a href=""><img src="images/pencil-plus.svg" style="height: 20px;"/> Ajouter un utilisateur</a>
 <table>
     <thead>
         <tr>

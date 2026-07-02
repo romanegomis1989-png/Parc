@@ -18,6 +18,7 @@ $mouvements = $requete->fetchAll(PDO::FETCH_ASSOC);
 <h1>Parc informatique</h1>
 <h2>Entrées/Sorties</h2>
 
+<a href=""><img src="images/pencil-plus.svg" style="height: 20px;"/> Ajouter un mouvement</a>
 <table>
     <thead>
         <tr>
