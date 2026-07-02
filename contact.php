@@ -4,7 +4,7 @@
 <h1>Parc informatique</h1>
 <h2>Contactez-nous !</h2>
 
-<form action="" method="post">
+<form action="envoi.php" method="post">
     <p>
         <label for="nom">Nom</label><br>
         <input type="text" id="nom" name="nom" required>
