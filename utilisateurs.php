@@ -4,7 +4,7 @@
 
 <?php
 
-$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', USER, PWD);
 $requete = $pdo->query('SELECT utilisateurs.*, services.nom AS nom_service
                          FROM utilisateurs
                          LEFT JOIN services ON utilisateurs.id_service = services.id');

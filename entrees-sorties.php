@@ -4,7 +4,7 @@
 
 <?php
 
-$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', USER, PWD);
 $requete = $pdo->query('SELECT utilise.*, utilisateurs.nom AS nom_utilisateur, utilisateurs.prenom AS prenom_utilisateur, materiels.no_serie, materiels.modele
                          FROM utilise
                          LEFT JOIN utilisateurs ON utilise.id_utilisateur = utilisateurs.id

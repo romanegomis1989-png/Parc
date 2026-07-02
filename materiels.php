@@ -4,7 +4,7 @@
 
 <?php
 
-$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+$pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', USER, PWD);
 $requete = $pdo->query('SELECT * FROM materiels');
 $materiels= $requete->fetchAll(PDO::FETCH_ASSOC);
 
