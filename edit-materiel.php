@@ -19,6 +19,10 @@
     $pdo = new PDO ('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4',USER, PWD);
     $requete = $pdo->prepare('INSERT INTO materiels(no_serie, id_marque, modele, date_achat, prix_achat) VALUES (:no_serie, :id_marque, :modele, :date_achat, :prix_achat);');
     $requete->execute([':no_serie'=>$no_serie, 'id_marque'=>$id_marque, 'modele'=>$modele, 'date_achat'=>$date_achat, 'prix_achat'=>$prix_achat]);
+
+    //Redirection vers la liste
+    header('location:materiels.php');
+
     }
     else {
         echo "On a ouvert la page";
@@ -41,15 +45,26 @@
     </p>
     <p>
         <label for="id_marque">Marque</label><br>
-        <input type="text" id="id_marque" name="id_marque" required>
+        <select id="id_marque" name="id_marque">
+            <?php
+                $pdo = new PDO('mysql:host=' . HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', USER, PWD);
+                $requete = $pdo->query('SELECT * FROM marques');
+                $marques = $requete->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach($marques as $marque) {
+                    echo "<option value='" . $marque['id'] . "'>" . $marque['nom'] . "</option>";
+                }
+            ?>           
+        </select>    
     </p>
     <p>
         <label for="modele">Modèle</label><br>
         <input type="text" id="modele" name="modele" required>
+
     </p>
     <p>
         <label for="date_achat">Date d'achat</label><br>
-        <input type="text" id="date_achat" name="date_achat" required>
+        <input type="date" id="date_achat" name="date_achat" required>
     </p>
     <p>
         <label for="prix_achat">Prix</label><br>
