@@ -38,7 +38,7 @@ $utilisateurs = $requete->fetchAll(PDO::FETCH_ASSOC);
             echo '<td>' . $utilisateur['prenom'] . '</td>';
             echo '<td>' . $utilisateur['email'] . '</td>';
             echo '<td>' . $utilisateur['nom_service'] . '</td>';
-            echo '<td><a href="">Modifier</a>&nbsp;<a href="">Supprimer</a></td>';
+            echo '<td><a href=""><img src="images/pencil.svg" style="height: 20px;"/></a>&nbsp;<a href=""><img src="images/trash.svg" style="height: 20px;"/></a></td>';
             echo '</tr>';
     }
     ?>

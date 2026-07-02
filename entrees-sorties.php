@@ -41,7 +41,7 @@ $mouvements = $requete->fetchAll(PDO::FETCH_ASSOC);
             echo '<td>' . $mouvement['date_debut'] . '</td>';
             echo '<td>' . $mouvement['date_fin_prevue'] . '</td>';
             echo '<td>' . $mouvement['date_fin'] . '</td>';
-            echo '<td><a href="">Modifier</a>&nbsp;<a href="">Supprimer</a></td>';
+            echo '<td><a href=""><img src="images/pencil.svg" style="height: 20px;"/></a>&nbsp;<a href=""><img src="images/trash.svg" style="height: 20px;"/></a></td>';
             echo '</tr>';
     }
     ?>

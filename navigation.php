@@ -1,5 +1,5 @@
 <nav>
-    <img src="logo.svg" alt="Logo"> 
+    <img src="images/logo.svg" alt="Logo"> 
     <ul>
         <li><a href="index.php">Accueil</a></li>
         <li><a href="materiels.php">Matériels</a></li>
